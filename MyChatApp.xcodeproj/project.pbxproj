@@ -81,8 +81,8 @@
 		F81B91F725F8BC630017C132 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F81B91E425F8BC490017C132 /* ConversationsViewController.swift */,
 				F81B920325F8CE2B0017C132 /* Login */,
+				F81B91E425F8BC490017C132 /* ConversationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

@@ -13,14 +13,20 @@ class ConversationsViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .red
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        validateAuth()
     }
     
     private func validateAuth() {
-        
         // Bool型を読み取るKeyに対応する値がなかったら、falseが返ってくる
-        let isLoggedIn = UserDefaults.standard.bool(forKey: "logged_in")
+        let isLoggedIn = UserDefaults.standard.bool(forKey: "loggedIn")
         
-        if !isLoggedIn {
+        if isLoggedIn == false {
             let loginVc = LoginViewController()
             let nav = UINavigationController(rootViewController: loginVc)
             nav.modalPresentationStyle = .fullScreen
