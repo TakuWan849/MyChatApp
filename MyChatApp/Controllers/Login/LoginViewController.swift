@@ -8,15 +8,19 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    //MARK:- Parts
+    private let logoImageView: UIImageView = {
+        let image = UIImageView()
+        
+        return image
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
-        
-        title = "Log In"
-    }
     
-
+    }
 
 }
