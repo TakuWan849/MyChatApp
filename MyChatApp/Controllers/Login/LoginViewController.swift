@@ -98,12 +98,12 @@ class LoginViewController: UIViewController {
         return button
     }()
 
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+        createNewUserButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         
         // AddSubViews
         view.addSubview(scrollView)
@@ -128,6 +128,12 @@ class LoginViewController: UIViewController {
         passwordField.frame = CGRect(x: 10, y: emailField.bottom+5, width: scrollView.width - 20, height: 60)
         loginButton.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: passwordField.bottom + 206, width: buttonSize, height: 56)
         createNewUserButton.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: loginButton.bottom + 32, width: buttonSize, height: 20)
+        
+    }
+    
+    @objc private func didTapRegisterButton() {
+        let vc = RegisterViewController()
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 
