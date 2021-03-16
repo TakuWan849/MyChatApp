@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
        let label = UILabel()
         label.text = "Login"
         label.textAlignment = .center
+        label.font = .systemFont(ofSize: 34, weight: .bold)
         
         return label
     }()
@@ -92,9 +93,6 @@ class LoginViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        emailField.setUnderLine()
-        passwordField.setUnderLine()
-        
         // AddSubViews
         view.addSubview(scrollView)
         scrollView.addSubview(logoImageView)
@@ -108,17 +106,14 @@ class LoginViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-//        emailField.setUnderLine()
-//        passwordField.setUnderLine()
-        
         scrollView.frame = view.bounds
         let logoSize = scrollView.width / 7
         let buttonSize = scrollView.width / 1.1
         
-        logoImageView.frame = CGRect(x: (scrollView.width - logoSize) / 2, y: 4, width: logoSize, height: logoSize)
+        logoImageView.frame = CGRect(x: (scrollView.width - logoSize) / 2, y: 20, width: logoSize, height: logoSize)
         titleLabel.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: logoImageView.bottom + 35, width: buttonSize, height: 41)
-        emailField.frame = CGRect(x: 0, y: titleLabel.bottom + 100, width: scrollView.width, height: 60)
-        passwordField.frame = CGRect(x: 0, y: emailField.bottom, width: scrollView.width, height: 60)
+        emailField.frame = CGRect(x: 0, y: titleLabel.bottom + 70, width: scrollView.width, height: 60)
+        passwordField.frame = CGRect(x: 0, y: emailField.bottom + 10, width: scrollView.width, height: 60)
         loginButton.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: passwordField.bottom + 206, width: buttonSize, height: 56)
         createNewUserButton.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: loginButton.bottom + 32, width: buttonSize, height: 20)
         
