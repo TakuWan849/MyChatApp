@@ -41,9 +41,14 @@ class LoginViewController: UIViewController {
         field.autocorrectionType = .no
         field.returnKeyType = .continue
         
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         field.leftViewMode = .always
         field.backgroundColor = .white
+        
+        field.layer.shadowColor = UIColor.lightGray.cgColor
+        field.layer.shadowOffset = CGSize(width: 0.0, height: 0.5)
+        field.layer.shadowOpacity = 1.0
+        field.layer.shadowRadius = 0.0
         
         return field
     }()
@@ -56,11 +61,17 @@ class LoginViewController: UIViewController {
         field.autocorrectionType = .no
         field.returnKeyType = .continue
         
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 0))
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
         field.leftViewMode = .always
         field.backgroundColor = .white
         
         field.isSecureTextEntry = true
+        
+        // fieldに下線を引く
+        field.layer.shadowColor = UIColor.lightGray.cgColor
+        field.layer.shadowOffset = CGSize(width: 0.0, height: 0.5)
+        field.layer.shadowOpacity = 1.0
+        field.layer.shadowRadius = 0.0
         
         return field
     }()
@@ -86,6 +97,7 @@ class LoginViewController: UIViewController {
         
         return button
     }()
+
     
 
     override func viewDidLoad() {
@@ -112,8 +124,8 @@ class LoginViewController: UIViewController {
         
         logoImageView.frame = CGRect(x: (scrollView.width - logoSize) / 2, y: 20, width: logoSize, height: logoSize)
         titleLabel.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: logoImageView.bottom + 35, width: buttonSize, height: 41)
-        emailField.frame = CGRect(x: 0, y: titleLabel.bottom + 70, width: scrollView.width, height: 60)
-        passwordField.frame = CGRect(x: 0, y: emailField.bottom + 10, width: scrollView.width, height: 60)
+        emailField.frame = CGRect(x: 10, y: titleLabel.bottom + 70, width: scrollView.width - 20, height: 60)
+        passwordField.frame = CGRect(x: 10, y: emailField.bottom+5, width: scrollView.width - 20, height: 60)
         loginButton.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: passwordField.bottom + 206, width: buttonSize, height: 56)
         createNewUserButton.frame = CGRect(x: (scrollView.width - buttonSize) / 2, y: loginButton.bottom + 32, width: buttonSize, height: 20)
         
