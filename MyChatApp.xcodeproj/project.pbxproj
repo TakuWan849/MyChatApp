@@ -17,6 +17,7 @@
 		F81B91FE25F8CE1A0017C132 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B91FD25F8CE1A0017C132 /* LoginViewController.swift */; };
 		F81B920125F8CE240017C132 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B920025F8CE240017C132 /* RegisterViewController.swift */; };
 		F86B11172600ABB4007A7902 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86B11162600ABB4007A7902 /* Extension.swift */; };
+		F86B117A26020738007A7902 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F86B117926020738007A7902 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F81B91FD25F8CE1A0017C132 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F81B920025F8CE240017C132 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F86B11162600ABB4007A7902 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F86B117926020738007A7902 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		F81B91F525F8BC5B0017C132 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F86B117926020738007A7902 /* GoogleService-Info.plist */,
 				F81B91E025F8BC490017C132 /* AppDelegate.swift */,
 				F81B91E225F8BC490017C132 /* SceneDelegate.swift */,
 				F86B11162600ABB4007A7902 /* Extension.swift */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F81B91ED25F8BC4C0017C132 /* LaunchScreen.storyboard in Resources */,
+				F86B117A26020738007A7902 /* GoogleService-Info.plist in Resources */,
 				F81B91EA25F8BC4C0017C132 /* Assets.xcassets in Resources */,
 				F81B91E825F8BC490017C132 /* Main.storyboard in Resources */,
 			);
@@ -440,6 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -460,6 +465,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
