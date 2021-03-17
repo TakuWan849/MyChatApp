@@ -98,12 +98,15 @@ class LoginViewController: UIViewController {
         return button
     }()
 
+    // MARK:- 読み込み処理関連
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
+        // ButtonTarget
         createNewUserButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         
         // AddSubViews
         view.addSubview(scrollView)
@@ -131,10 +134,30 @@ class LoginViewController: UIViewController {
         
     }
     
+    // MARK:- メソッド
     @objc private func didTapRegisterButton() {
         let vc = RegisterViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func didTapLoginButton() {
         
+        guard let email = emailField.text,
+              let password = passwordField.text,
+              !email.isEmpty, !password.isEmpty,
+              password.count >= 6 else {
+            alertUserLoginError()
+            return
+        }
+        
+        // Firebaseを使ったEmailでのログイン機能の実装
+        
+    }
+    
+    private func alertUserLoginError() {
+        let alert = UIAlertController(title: "ログインエラー", message: "ログイン情報を入力してください", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "閉じる", style: .cancel, handler: nil))
+        present(alert, animated: true)
     }
 
 }
